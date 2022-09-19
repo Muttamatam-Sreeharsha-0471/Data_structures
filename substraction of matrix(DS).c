@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int r,c,i,j,a[100][100],b[100][100],add[100][100];
+	int r,c,i,j,a[100][100],b[100][100],sub[100][100];
 	
 	printf("enter no of rows:");
 	scanf("%d",&r);
@@ -25,13 +25,13 @@ int main()
 	for(i=0;i<r;i++)
 	for(j=0;j<c;j++)
 	{
-		add[i][j]=a[i][j]-b[i][j];
+		sub[i][j]=a[i][j]-b[i][j];
 	}
-	printf("\naddition of that two matrix are:-\n");
+	printf("\nsubstraction of that two matrix are:-\n");
 	for(i=0;i<r;i++)
 	for(j=0;j<c;j++)
 	{
-		printf("%d  ",add[i][j]);
+		printf("%d  ",sub[i][j]);
 		if(j==c-1)
 		{
 			printf("\n\n");
