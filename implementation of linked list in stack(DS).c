@@ -7,8 +7,11 @@ struct node{
 int topelement();
 void push(int data);
 void pop();
+void empty();
 void display();
 void destroy();
+void stack_count();
+void create();
 int count = 0;
 void main(){
    int no, ch, e;
@@ -40,20 +43,16 @@ void main(){
       }
    }
 }
-void create()
-{
+void create(){
    top = NULL;
 }
-void push(int data)
-{
-   if (top == NULL)
-   {
+void push(int data){
+   if (top == NULL){
       top =(struct node *)malloc(1*sizeof(struct node));
       top->ptr = NULL;
       top->info = data;
    }
-   else
-   {
+   else{
       temp =(struct node *)malloc(1*sizeof(struct node));
       temp->ptr = top;
       temp->info = data;
@@ -61,25 +60,20 @@ void push(int data)
    }
    count++;
 }
-void display()
-{
+void display(){
    top1 = top;
-   if (top1 == NULL)
-   {
+   if (top1 == NULL){
       printf("empty stack");
       return;
    }
-   while (top1 != NULL)
-   {
+   while (top1 != NULL){
       printf("%d ", top1->info);
       top1 = top1->ptr;
    }
 }
-void pop()
-{
+void pop(){
    top1 = top;
-   if (top1 == NULL)
-   {
+   if (top1 == NULL){
       printf("\n error");
       return;
    }
@@ -90,7 +84,6 @@ void pop()
       top = top1;
       count--;
    }
-   int topelement()
-   {
+   int topelement(){
       return(top->info);
    }
